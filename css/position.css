@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Static (default position, no need to set explicitly) */
+.static-box {
+  background-color: lightgray;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Relative Position */
+.relative-box {
+  position: relative;
+  background-color: lightcoral;
+  padding: 20px;
+  margin-bottom: 20px;
+  top: 20px; /* Moves down 20px from its normal position */
+  left: 10px; /* Moves right 10px from its normal position */
+}
+
+/* Absolute Position */
+.absolute-box {
+  position: absolute;
+  background-color: lightblue;
+  padding: 20px;
+  top: 100px; /* Positioned 100px from the top of the nearest positioned ancestor (or the page if none) */
+  left: 50px; /* Positioned 50px from the left */
+  width: 200px;
+}
+
+/* Fixed Position */
+.fixed-box {
+  position: fixed;
+  background-color: lightgreen;
+  padding: 20px;
+  top: 10px; /* Always 10px from the top of the viewport */
+  right: 10px; /* Always 10px from the right */
+  width: 150px;
+}
+
+/* Sticky Position */
+.sticky-box {
+  position: sticky;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+  top: 0; /* Becomes sticky when scrolled to the top of the viewport */
+  margin-bottom: 1000px; /* Extra space to scroll */
+}
+
+/* Initial Position */
+.initial-box {
+  position: relative; /* Set some other value first */
+  top: 20px; /* Position it */
+  position: initial; /* Resets to default (static) */
+  background-color: lightpink;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Parent element with relative position */
+.parent {
+  position: relative;
+  background-color: lightblue;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Inherit Position */
+.inherit-box {
+  position: inherit; /* Inherits position from parent (which is relative) */
+  background-color: lightgreen;
+  padding: 20px;
+}

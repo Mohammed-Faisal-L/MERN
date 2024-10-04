@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All HTML Tags</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <!-- Header Tags -->
+    <h1>Header 1</h1>
+    <h2>Header 2</h2>
+    <h3>Header 3</h3>
+    <h4>Header 4</h4>
+    <h5>Header 5</h5>
+    <h6>Header 6</h6>
+
+    <!-- Text Formatting Tags -->
+    <p>
+      <b>Lorem ipsum dolor</b> <i>sit amet consectetur adipisicing</i>
+      <strong>elit. Quae doloremque</strong> expedita
+      <em>perferendis aliquam soluta</em> corrupti hic
+      <mark>rem vel inventore</mark>
+      <del>tempore. Quae, porro! Laborum </del>
+      <ins>expedita distinctio animi, officiis</ins> neque et praesentium?
+      <u>Dolorum, quas. Libero eligendi</u>
+      <strike>explicabo voluptatibus animi quibusdam consectetur,</strike>
+      <small> saepe, error ab itaque commodi </small>
+      P<sub>0</sub> A<sup>5</sup>
+      <big>dolore cumque dolores delectus. Sequi</big>
+      saepe numquam nihil assumenda dolores quaerat eveniet illum tenetur
+      <blockquote> aliquid consequuntur. Rerum temporibus ut ad cumque</blockquote> autem voluptate
+      <samp>asperiores eveniet animi aliquid similique?</samp> <pre>Adipisci odit nesciunt,
+        veritatis quod nemo,</pre> vel <var>dolorem ad accusantium nulla numquam atque</var> optio
+      ab <code> officia temporibus pariatur. Voluptates</code> soluta quam doloremque commodi
+      voluptas <kbd>doloribus laborum nostrum ad officia, suscipit</kbd> eos ipsa
+      consequatur ea dolorum vel blanditiis. Facere, placeat labore eos
+      assumenda <xmp>iste ullam rem officiis fuga recusandae.</xmp> Deserunt exercitationem
+      ipsum dicta <q>nemo quos omnis, possimus consectetur, recusandae</q> quia ea
+      similique nulla assumenda voluptates ipsam pariatur dolorum nostrum rem
+      quo tempora! Excepturi eveniet eum officia iste ipsam nesciunt.
+    </p>
+
+    <!-- Ordered Lists -->
+    <ol type="1" start="5" reversed>
+      <li>apple</li>
+      <li>banana</li>
+      <li>orange</li>
+      <li>pineapple</li>
+      <li>lemon</li>
+      <li>dragon fruit</li>
+    </ol>
+
+    <!-- Unordered Lists -->
+    <ul type="square">
+      <li>yash</li>
+      <li>raj</li>
+      <li>vinay</li>
+      <li>veenal</li>
+      <li>revanth</li>
+      <li>faisal</li>
+    </ul>
+
+    <!-- Descriptive Lists -->
+    <dl>
+      <dt>NaOH</dt>
+      <dd>Sodium Hydroxide used in chemical reactions.</dd>
+      <dt>H<sub>2</sub>O</dt>
+      <dd>Chemical formula for water.</dd>
+    </dl>
+
+    <!-- Nested Lists -->
+    <ul>
+      <li>India</li>
+      <li>
+        <ul>
+          <li>Karnataka</li>
+          <li>
+            <ul>
+              <li>Bengaluru</li>
+              <li>Mysuru</li>
+              <li>Mangaluru</li>
+            </ul>
+          </li>
+          <li>Tamil Nadu</li>
+          <li>Kerala</li>
+          <li>Andhra Pradesh</li>
+          <li>Telangana</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Tables Tags -->
+    <table border="1" height="500px" width="500px" bgcolor="lightgreen" cellpadding="10px" align="center" style="border-collapse: collapse;">
+      <caption>Time Table</caption>
+      <tr>
+        <th>Periods / Days</th>
+        <th>1st</th>
+        <th>2nd</th>
+        <th>3rd</th>
+        <th>4th</th>
+        <th>5th</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td rowspan="2">Maths</td>
+        <td>Science</td>
+        <td>Social Studies</td>
+        <td>English</td>
+        <td rowspan="2">Hindi</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>English</td>
+        <td>Science</td>
+        <td>Social Studies</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Social Studies</td>
+        <td>Hindi</td>
+        <td>English</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>English</td>
+        <td>Science</td>
+        <td>Maths</td>
+        <td>Social Studies</td>
+        <td>Hindi</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Social Studies</td>
+        <td>English</td>
+        <td>Hindi</td>
+        <td colspan="2">Games</td>
+      </tr>
+    </table>
+
+    <!-- Form Tags -->
+    <form action="post" enctype="application/x-www-form-urlencoded" style="margin-top: 2%;">
+
+      <fieldset>
+        <legend> Basic Form </legend>
+
+        <label for="name">Name: </label> 
+        <input type="text" id="name" placeholder="Enter your Name" minlength="3" maxlength="50" required autofocus> <br><br> 
+    
+        <label for="email">Email: </label> 
+        <input type="email" id="email" placeholder="raj@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> <br><br> 
+    
+        <label for="password">Password: </label> 
+        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}" required 
+               title="Password must be at least 8 characters long, include at least one uppercase letter, one number, and one special character"> <br><br>
+
+        <label for="hidden">Hidden: </label> 
+        <input type="hidden" id="hidden"> <br><br>
+
+        <label for="image">Image: </label> 
+        <input type="image" id="image"> <br><br>
+
+        <label for="month">Month: </label> 
+        <input type="month" id="month"> <br><br>
+
+        <label for="week">Week: </label> 
+        <input type="week" id="week"> <br><br>
+
+        <label for="">Gender: </label>
+        <input type="radio" name="gender" id="g1" value="Male" required>  <label for="g1">Male</label>
+        <input type="radio" name="gender" id="g2" value="Female">  <label for="g2">Female</label>
+        <input type="radio" name="gender" id="g3" value="Others">  <label for="g3">Others</label> <br><br> 
+
+        <label for="phone">Phone Number: </label> 
+        <input type="number" id="phone" pattern="[0-9]{10}" required title="Phone Number Must Be 10 Digits"> <br><br> 
+
+        <label for="dob">Dob: </label> 
+        <input type="date" id="dob" required> <br><br> 
+
+        <label for="select">Dropdown: </label>
+        <select id="select" required>
+          <option selected disabled value="">Select A State</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="tamilnadu">Tamil Nadu</option>
+          <option value="kerala">Kerala</option>
+          <option value="andhrapradesh">Andhra Pradesh</option>
+          <option value="telangana">Telangana</option>
+        </select> <br><br> 
+
+        <label for="dob">Color: </label> 
+        <input type="color" id="color"> <br><br> 
+
+        <label for="datetime-local">Dob: </label> 
+        <input type="datetime-local" id="datetime-local"> <br><br> 
+
+        <label for="search">Search: </label> 
+        <input type="search" id="search" required placeholder="Search Something......"> <br><br>
+
+        <label for="range">Range: </label> 
+        <input type="range" id="range" min="18" max="100" value="50"> <br><br>
+
+        <label for="tel">Telephone Number: </label> 
+        <input type="tel" id="tel" pattern="[0-9]{10}" title="Enter A 10 Digit Telephone Number"> <br><br>
+
+        <label for="time">Time: </label> 
+        <input type="time" id="time" required> <br><br>
+
+        <label for="url">Url: </label> 
+        <input type="url" id="url" pattern="https?://.+" title="Include http:// or https://"> <br><br>
+
+        <label for="file">Upload File: </label> 
+        <input type="file" id="file" accept=".jpg,.jpeg,.png,.pdf" required> <br><br> 
+
+        <label for="checkbox">Sports: </label> 
+        <input type="checkbox" id="cricket" name="sports" value="Cricket" required> Cricket 
+        <input type="checkbox" id="football" name="sports" value="Football"> Football 
+        <input type="checkbox" id="volleyball" name="sports" value="Volleyball"> Volleyball  <br><br> 
+
+        <label for="textarea">Feedback </label> <br>
+        <textarea name="textarea" id="textarea" minlength="10" placeholder="Enter Your Feedback"></textarea> <br><br>
+        
+        <input type="submit"> <input type="reset" value="Reset"> <input type="button" value="Just A Button">
+      </fieldset>
+
+    </form> <br><br>
+
+    <!-- Anchor Tag -->
+    <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">Click here for chatgpt</a> <br><br>
+
+    <!-- Media Queries -->
+    <h3>Video: </h3>
+    <video src="../videos/3571264-uhd_3840_2160_30fps.mp4" height="900px" width="900px" controls id="video"></video> <br><br>
+
+    <h3>Audio: </h3>
+    <audio src="../audios/StockTune-Serene Nature Stomp Symphony_1722828430.mp3" controls id="audio"></audio> <br><br>
+
+    <!-- Iframe Tag -->
+    <iframe src="./sample.html" frameborder="0" title="Iframe example"></iframe> 
+
+  </body>
+</html>

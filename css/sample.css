@@ -1,0 +1,40 @@
+h2 {
+  margin: 5%;
+}
+
+h1 {
+  color: lightgreen;
+  font-size: 60px;
+  margin-left: 9%;
+}
+
+img {
+  border-radius: 100%;
+}
+
+span {
+  margin: 10%;
+  font-size: 20px;
+}
+
+span#special {
+  margin: 10%;
+  font-size: 20px;
+}
+
+.header {
+  background-color: aqua;
+  border: 1px solid black;
+  height: 85px;
+  width: 100%;
+  padding: 0%;
+}
+
+.main {
+  border: 1px solid black;
+  height: 600px;
+  width: 100%;
+  background-image: url("https://news.fit.edu/wp-content/uploads/2015/10/Pink-and-purple-stardust-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
