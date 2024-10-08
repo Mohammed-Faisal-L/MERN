@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.blue-header {
+    background-color: #106eea;
+}
+
+span {
+    color: #106eea;
+}
+
+img {
+    clip-path: circle(50% at 50% 50%);
+}
+
+.underline-on-click {
+    text-decoration: none; /* No underline by default */
+    color: black; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+
+.underline-on-click:focus,
+.underline-on-click:active {
+  text-decoration: underline; /* Underline when clicked or focused */
+  color: blue; /* Change color to blue when clicked or focused */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bg-image {
+    background-image: url("https://cdn.pixabay.com/photo/2021/12/29/15/47/glass-building-6901990_640.jpg");
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15%;
+}
+
+p {
+    font-size: 20px;
+}
