@@ -58,6 +58,31 @@ console.log(20 >= 10);
 console.log(20 < 10);
 console.log(20 <= 10);
 
-let marks=67;
-const answer = (marks >= 85) ? "Distinction" : (marks >= 75) ? "1st class" : (marks > 60) ? "2nd class" : (marks >= 30) ? "3rd class" : (marks < 30) ? "Fail" : "Wrong marks";
+let marks = 67;
+const answer =
+  marks >= 85
+    ? "Distinction"
+    : marks >= 75
+    ? "1st class"
+    : marks > 60
+    ? "2nd class"
+    : marks >= 30
+    ? "3rd class"
+    : marks < 30
+    ? "Fail"
+    : "Wrong marks";
 console.log(answer);
+
+function fun(val) {
+  let v = val;
+  console.log(v);
+}
+fun(52);
+
+let func = function (params) {
+  console.log(params, "just a comment for anonymous function");
+};
+func(10);
+
+let sum = (a, b) => a + b;
+console.log(sum(5,9));
