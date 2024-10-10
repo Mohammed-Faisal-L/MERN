@@ -24,7 +24,7 @@ ab.name = "aslam";
 console.log(ab.name);
 console.log(ba.name);
 
-// task
+// operators in js
 var c = 3;
 var d = 4;
 
@@ -73,6 +73,7 @@ const answer =
     : "Wrong marks";
 console.log(answer);
 
+// functions in js
 function fun(val) {
   let v = val;
   console.log(v);
@@ -85,4 +86,141 @@ let func = function (params) {
 func(10);
 
 let sum = (a, b) => a + b;
-console.log(sum(5,9));
+console.log(sum(5, 9));
+
+// for loops in js
+
+let arr2 = [12, 54, 78, 33, 1];
+arr2.forEach((element) => {
+  console.log(element);
+});
+
+let object = { a: "apple", b: "banana" };
+for (const key in object) {
+  console.log(key);
+  console.log(object[key]);
+}
+
+const people = [
+  { name: "Alice", age: 30 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 35 },
+];
+for (const person of people) {
+  console.log(`${person.name} is ${person.age} years old.`);
+}
+
+// array methods
+let arr = [12, 54, 55, 2, 30];
+let o = arr.push(1, 2, 1, 2);
+console.log(arr, " arr ", o, " output ");
+
+let poppedElement = arr.pop();
+console.log(poppedElement, " popped element", arr, "array");
+
+let shift = arr.shift();
+console.log(shift, " shifted value", arr, "array");
+
+let unshift = arr.unshift();
+console.log(unshift, "  ");
+
+// filter, map, includes, join
+
+let map = arr.map((ele) => ele + 2);
+console.log(map, "mapped array");
+
+let filter = arr.filter((ele) => ele > 10);
+console.log(filter, " filtered array ");
+
+let include = arr.includes(100);
+console.log(include, " include ");
+
+let join = arr.join(" ");
+console.log(join, " joined array");
+
+// reduce method
+
+let reducerArr = [12, 56, 22, 77, 69];
+let resVal = reducerArr.reduce((acc, current) => acc + current, 3);
+console.log(resVal);
+
+let exmArr = [20, 30, 50, 60, 99, 87, 67, 67, 54, 47];
+
+// let sortedArr = exmArr.sort((a, b) => a - b);
+// console.log(sortedArr);
+// let lastIndex = sortedArr[sortedArr.length-1];
+// console.log(lastIndex);
+
+let highestReduce = exmArr.reduce((acc, curr) => (acc > curr ? acc : curr));
+console.log(highestReduce);
+
+let arrex = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+let result = arrex.reduce((acc, curr) => acc.concat(curr), []);
+console.log(result);
+
+let flattenedArr = arrex.flat();
+console.log(flattenedArr);
+
+// object methods
+
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4,
+  t: {
+    w: 3,
+    x: 8,
+    y: 8,
+    z: {
+      p: 7,
+      q: 9,
+    },
+  },
+};
+
+let keys = Object.keys(obj);
+console.log(keys);
+
+let values = Object.values(obj);
+console.log(values);
+
+let entries = Object.entries(obj);
+console.log(entries);
+
+let assign = Object.assign(obj, { z: 10 });
+console.log(assign);
+
+let freeze = Object.freeze(obj); // object freezed and cannot add more properties to the object but can modify properties
+obj.b = "hello";
+
+let seal = Object.seal(obj); // object freezed and cannot add and modify more properties to the object
+console.log(seal);
+
+// shallow copy of objects
+let obj2 = { ...obj };
+obj2.t.z.q = 40;
+
+console.log(obj, obj2);
+
+// deep copy of objects
+let obj3 = JSON.parse(JSON.stringify(obj));
+obj3.t.z.p = 9;
+obj3.t.z = 20;
+obj3.c = 50;
+console.log(obj, obj3);
+
+// conditional statements in js
+
+let list = [1, 2, 3, 4, 6, 5, 7, 8, 9];
+let mulArr = [];
+let res = list.map((ele) => {
+  if (ele % 2 === 0) {
+    mulArr.push(ele * 2);
+  }
+});
+console.log(res, mulArr);
