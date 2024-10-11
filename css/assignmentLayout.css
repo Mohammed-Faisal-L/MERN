@@ -15,6 +15,14 @@ span {
     color: #106eea;
 }
 
+.black {
+    color: #444;
+}
+
+.light-blue {
+    background-color: #b7d3f8;
+}
+
 img {
     clip-path: circle(50% at 50% 50%);
 }
@@ -36,7 +44,7 @@ ul {
 }
 
 .bg-image {
-    background-image: url("https://cdn.pixabay.com/photo/2021/12/29/15/47/glass-building-6901990_640.jpg");
+    background-image: url("https://bootstrapmade.com/content/demo/BizLand/assets/img/hero-bg.jpg");
     height: 600px;
     width: 100%;
     background-repeat: no-repeat;

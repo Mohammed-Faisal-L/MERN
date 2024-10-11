@@ -132,9 +132,6 @@ console.log(map, "mapped array");
 let filter = arr.filter((ele) => ele > 10);
 console.log(filter, " filtered array ");
 
-let include = arr.includes(100);
-console.log(include, " include ");
-
 let join = arr.join(" ");
 console.log(join, " joined array");
 
@@ -164,6 +161,58 @@ console.log(result);
 
 let flattenedArr = arrex.flat();
 console.log(flattenedArr);
+
+let slice = exmArr.slice(1, 4);
+console.log(exmArr, slice);
+
+let splice = exmArr.splice(1, 5);
+console.log(exmArr, splice);
+
+let reduceRight = exmArr.reduceRight((acc, curr) => acc + curr, 2);
+console.log(exmArr, reduceRight);
+
+let find = exmArr.find((num) => num > 45);
+console.log(exmArr, find);
+
+let findIndex = exmArr.findIndex((num) => num < 45);
+console.log(findIndex);
+
+let every = exmArr.every((num) => num % 2 === 0);
+console.log(every);
+
+let some = exmArr.some((num) => num < 10);
+console.log(some);
+
+let includes = exmArr.includes(45);
+console.log(includes);
+
+let indexOf = exmArr.indexOf(55);
+console.log(indexOf);
+
+let lastIndexOf = exmArr.lastIndexOf(66);
+console.log(lastIndexOf);
+
+let reverse = exmArr.reverse();
+console.log(reverse);
+
+let sort = exmArr.sort((a, b) => b - a);
+console.log(sort);
+
+let flat = [
+  [22, 8],
+  [22, 5],
+  [12, 3],
+].flat(1);
+console.log(flat);
+
+let flatMap = [1, 2, 2, 2, 2, 2, 2, 0, 3, 3].flatMap((num) => [num * 2]);
+console.log(flatMap);
+
+let arrayfrom = Array.from("hello");
+console.log(arrayfrom);
+
+let isArray = Array.isArray(exmArr);
+console.log(isArray);
 
 // object methods
 
