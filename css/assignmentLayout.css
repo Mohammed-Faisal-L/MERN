@@ -3,9 +3,11 @@
     margin: 0;
 }
 
-.sticky {
-    position: sticky;
-}
+#home {
+    position: relative; /* Ensures the container is properly positioned */
+    overflow: visible;  /* Ensures no scroll or hidden overflow */
+    min-height: 100vh;  /* Ensures enough height for scrolling */
+  }
 
 .blue-header {
     background-color: #106eea;
@@ -15,7 +17,7 @@ span {
     color: #106eea;
 }
 
-.black {
+.light-black {
     color: #444;
 }
 
@@ -54,4 +56,23 @@ ul {
 
 p {
     font-size: 20px;
+}
+
+img {
+    border-radius: 0;
+    clip-path: circle(100%);
+}
+
+#about,
+#services,
+#portfolio,
+#team,
+#contact {
+    scroll-margin-top: 80px; /* Adjust based on your navbar height */
+    padding: 20px;
+}
+
+.btn:hover {
+    background-color: #106eea;
+    color: white;
 }
