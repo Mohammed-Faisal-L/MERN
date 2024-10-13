@@ -76,3 +76,35 @@ img {
     background-color: #106eea;
     color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    #navbarSupportedContent {
+        display: none;
+    }
+
+    .bizland-button {
+       display: flex;
+       justify-content: space-between;
+    }
+
+    div.main-header {
+       display: flex;
+       justify-content: space-between;
+    }
+
+    iframe {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    div.icons {
+        display: none;
+    }
+
+    iframe {
+        height: 300px;
+        width: 300px;
+    }
+}
