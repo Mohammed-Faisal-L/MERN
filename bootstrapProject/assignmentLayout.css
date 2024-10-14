@@ -46,7 +46,7 @@ ul {
 }
 
 .bg-image {
-    background-image: url("https://bootstrapmade.com/content/demo/BizLand/assets/img/hero-bg.jpg");
+    background-image: url("../images/homePage.jpg");
     height: 600px;
     width: 100%;
     background-repeat: no-repeat;

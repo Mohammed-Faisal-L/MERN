@@ -78,12 +78,14 @@ result = str1 === str2 ? "yes" : "no";
 console.log(result);
 
 // first non repeating character
-const charCount = {};
-for (const char of string) {
-  charCount[char] = charCount[char] !== undefined ? charCount[char] + 1 : 1;
-}
-for (const char of string) {
-  if (charCount[char] === 1) console.log(char);
+string = "call";
+let sArray = string.split("");
+for (let i = 0; i < sArray.length; i++) {
+  let count = 0;
+  for (let j = 0; j < sArray.length; j++) {
+    if (sArray[i] === sArray[j]) count++;
+  }
+  if (count == 1) console.log(sArray[i] + " non repeating");
 }
 
 // sum of nested array elements
@@ -97,14 +99,18 @@ console.log(sum);
 
 // move all zeroes to end of the array
 let ar = [12, 1, 0, 0, 0, 1, 1, 1];
-const nonZeroes = ar.filter((num) => num !== 0);
-const zeroes = ar.filter((num) => num === 0);
+const nonZeroes = [];
+const zeroes = [];
+for (const num of ar) {
+  if (num !== 0) nonZeroes.push(num);
+  else zeroes.push(num);
+}
 ar = [...nonZeroes, ...zeroes];
 console.log(ar);
 
 // finding missing number
 arr = [1, 2, 4, 5];
-n = 5;
+n = arr.length + 1;
 const expectedSum = (n * (n + 1)) / 2;
 const actualSum = arr.reduce((sum, num) => sum + num, 0);
 console.log(expectedSum - actualSum);
@@ -127,10 +133,23 @@ console.log(str);
 // find indices of two numbers that sum to match the target number
 arr = [2, 7, 11, 15];
 let target = 9;
-for (let i = 0; i < arr.length; i++) {
-  for (let j = i + 1; j < arr.length; j++) {
-    if (arr[i] + arr[j] === target) {
+for (let i = 0; i < arr.length; i++) 
+  for (let j = 0; j < arr.length; j++) 
+    if (arr[i] + arr[j] === target) 
       console.log(i, j);
-    }
-  }
+
+// check number of vowels in the given string
+let s = "listen";
+let sSplit = s.split("");
+let count = 0;
+for (let char of sSplit) {
+  if (
+    char === "a" ||
+    char === "e" ||
+    char === "i" ||
+    char === "o" ||
+    char === "u"
+  )
+    count++;
 }
+console.log(" number of vowels are ", count);
