@@ -13,7 +13,6 @@
     />
   </head>
   <body>
-    <div id="home">
     <div class="blue-header">
         <ul class="p-2 d-flex justify-content-around">
            <div class="d-flex justify-content-start">
@@ -43,7 +42,7 @@
             </div>
         </ul>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light m-0 position-sticky top-0 z-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-0 sticky-top">
         <div class="main-header container-fluid d-flex justify-content-around">
           <div class="bizland-button">
             <h1>BizLand<span>.</span></h1>
@@ -94,7 +93,6 @@
            <button type="button" class="btn btn-primary">GET STARTED</button>
            <img class="ms-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5AKecxA5AeBTv464epA1wWSyzr1NIAj70fQ&s" width="30px" height="30px" alt=""> <span class="fw-bold light-black">Watch Video</span>
       </div>
-    </div>
     <div id="about">
       <div class="d-flex justify-content-center">
         <h6 class="text-primary border border-light rounded-5 mt-1 ps-4 pe-4 pt-2 pb-2 light-blue">ABOUT</h6>
@@ -102,7 +100,7 @@
       <h2 class="text-center fw-bold mb-5">Find Out More <span>About Us</span></h2>
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 z-3 col-md-12 col-sm-12"><img src="../images/aboutPage.jpg" height="550px" width="100%" alt=""></div>
+          <div class="col-lg-6 z-3 col-md-12 col-sm-12"><img class="img-about" src="../images/aboutPage.jpg" height="550px" width="100%" alt=""></div>
           <div class="col-lg-6 col-md-12 col-sm-12">
             <h2 class="fw-bold mt-5">Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h2>
             <p class="light-black fst-italic fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -136,8 +134,8 @@
         <h6 class="text-primary border border-light rounded-5 mt-1 ps-4 pe-4 pt-2 pb-2 light-blue">SERVICES</h6>
       </div>
       <h2 class="text-center fw-bold mb-5">Check Our <span>Services</span></h2>
-      <div class="row d-flex justify-content-center flex-wrap gap-2">
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+      <div class="row d-flex justify-content-evenly gap-2">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-activity" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"/>
@@ -148,7 +146,7 @@
             <p class="card-text light-black fs-6 text-center">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
           </div>
         </div>
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-broadcast" viewBox="0 0 16 16">
               <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/>
@@ -159,7 +157,7 @@
             <p class="card-text light-black fs-6 text-center">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
           </div>
         </div>
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-easel" viewBox="0 0 16 16">
               <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0M2 3v7h12V3z"/>
@@ -170,7 +168,7 @@
             <p class="card-text light-black fs-6 text-center">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
           </div>
         </div>
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
               <path d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2m2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2 2 0 0 1 1.437-1.437V3.937A2 2 0 0 1 12.063 2.5H3.937A2 2 0 0 1 2.5 3.937M14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2M2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
@@ -181,7 +179,7 @@
             <p class="card-text light-black fs-6 text-center">Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
           </div>
         </div>
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-calendar4-week" viewBox="0 0 16 16">
               <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
@@ -193,7 +191,7 @@
             <p class="card-text light-black fs-6 text-center">Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
           </div>
         </div>
-        <div class="card col-lg-3 pt-5 pb-5 col-md-6 col-sm-12">
+        <div class="card col-lg-3 pt-5 pb-5 col-md-5 col-sm-12 mt-2">
           <div class="d-flex justify-content-center">
             <svg class="text-bg-primary p-3 border rounded" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-chat-square-text" viewBox="0 0 16 16">
               <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -220,7 +218,7 @@
       </div>
       <div class="d-flex justify-content-evenly">
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="../images/portfolio1.jpg" class="card-img-top" alt="...">
               <div class="card-footer">
@@ -228,7 +226,7 @@
               </div> 
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="../images/portfolio2.jpg" class="card-img-top" alt="...">
               <div class="card-footer">
@@ -236,7 +234,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="../images/portfolio3.jpg" class="card-img-top" alt="...">
               <div class="card-footer">
@@ -254,7 +252,7 @@
       <h2 class="text-center fw-bold mb-5">Our Hardworking <span>Team</span></h2>
       <div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="https://bootstrapmade.com/content/demo/BizLand/assets/img/team/team-1.jpg" class="card-img-top" alt="...">
               <div class="card-body">
@@ -263,7 +261,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="https://bootstrapmade.com/content/demo/BizLand/assets/img/team/team-2.jpg" class="card-img-top" alt="...">
               <div class="card-body">
@@ -272,7 +270,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="https://bootstrapmade.com/content/demo/BizLand/assets/img/team/team-3.jpg" class="card-img-top" alt="...">
               <div class="card-body">
@@ -281,7 +279,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="col-lg-3 col-md-6 col-sm-12 mt-3">
             <div class="card h-100">
               <img src="https://bootstrapmade.com/content/demo/BizLand/assets/img/team/team-4.jpg" class="card-img-top" alt="...">
               <div class="card-body">

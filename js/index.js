@@ -273,3 +273,109 @@ let res = list.map((ele) => {
   }
 });
 console.log(res, mulArr);
+
+// condition statements
+const fn1 = (val) => {
+  if (val > 20) {
+    console.log("value greater than 20");
+  } else if (val < 30) {
+    console.log("value less than 30");
+  } else {
+    console.log("both failed");
+  }
+  console.log("i will exec however");
+
+  switch (true) {
+    case val > 20: {
+      console.log("value greater than 20");
+      break;
+    }
+    case val < 30: {
+      console.log("value less than 30");
+      break;
+    }
+    default: {
+      console.log("both failed");
+      break;
+    }
+  }
+};
+fn1(23);
+
+const fn2 = (val) => {
+  switch (val) {
+    case 10: {
+      console.log(10 * 10);
+      break;
+    }
+
+    case 20: {
+      console.log(20 * 10);
+      break;
+    }
+
+    case 30: {
+      console.log(30 * 10);
+      break;
+    }
+
+    default: {
+      console.log("default value");
+    }
+  }
+};
+fn2(30);
+
+const fn3 = (value) => {
+  if (value === 10) {
+    console.log(10 * 10);
+  } else if (value === 20) {
+    console.log(20 * 20);
+  } else if (value === 30) {
+    console.log(30 * 30);
+  } else {
+    console.log("default value");
+  }
+};
+fn3(45);
+
+const fn4 = (num) => {
+  if (num % 2 === 0) {
+    console.log("it is an even number");
+  } else {
+    console.log("it is an odd number");
+  }
+};
+fn4(45);
+
+let myDate = new Date();
+console.log(myDate);
+console.log(myDate.getFullYear());
+console.log(myDate.getMonth());
+console.log(myDate.getDay());
+console.log(Date.now(), " now");
+
+console.log(Math.abs(-39));
+console.log(Math.ceil(4.5));
+console.log(Math.floor(4.5));
+console.log(Math.round(4.7));
+console.log(Math.min(12, 25, 36, 14, 78));
+console.log(Math.max(...[14, 25, 36, 89, 77]));
+console.log(Math.random(12));
+
+setTimeout(() => {
+  console.log("inside settimeout after 3s");
+}, 3000);
+
+setInterval(() => {
+  console.log("inside setinterval after every 5s");
+}, 5000);
+
+function fn7() {
+  for (var i = 0; i < 3; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 2000);
+  }
+}
+fn7();
