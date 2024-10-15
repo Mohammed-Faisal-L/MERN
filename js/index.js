@@ -379,3 +379,69 @@ function fn7() {
   }
 }
 fn7();
+
+// local and session storage
+const myData = {
+  name: "person",
+  place: "city",
+};
+let stringForm = JSON.stringify(myData);
+localStorage.setItem("token", myData);
+localStorage.removeItem("token");
+localStorage.clear();
+
+sessionStorage.clear();
+sessionStorage.setItem("token", stringForm);
+sessionStorage.removeItem("token");
+
+let localStorageData = localStorage.getItem("token");
+let sessionStorageData = sessionStorage.getItem("token");
+console.log(localStorageData);
+console.log(sessionStorageData);
+
+// promise and fetch
+const promise = new Promise((resolve, reject) => {
+  const sum = 6 + 7;
+  if (sum % 2 === 0) {
+    resolve("promise success");
+  } else {
+    reject("promise rejected");
+  }
+});
+
+promise.then((message) => {
+  console.log(" this is resolved ", message);
+});
+
+promise.catch((message) => {
+  console.log("this is rejected ", message);
+});
+
+const p = new Promise((resolve, reject) => {
+  if (5 > 100) {
+    resolve("yes it is");
+  } else {
+    reject("it is not");
+  }
+});
+
+p.then((message) => {
+  console.log(message);
+});
+
+p.catch((message) => {
+  console.log(message);
+});
+
+// fetch an api
+const myApi = async () => {
+  let url = await fetch("https://dummyjson.com/products")
+    .then(async (resp) => {
+      let response = await resp.json();
+      console.log(response);
+    })
+    .catch((msg) => {
+      console.log(msg);
+    });
+}
+myApi();
