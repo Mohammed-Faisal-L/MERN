@@ -443,5 +443,134 @@ const myApi = async () => {
     .catch((msg) => {
       console.log(msg);
     });
-}
+};
 myApi();
+
+// hoisting
+console.log(var1, " var");
+console.log(const1, "const");
+console.log(let1, "let");
+
+var var1 = 10;
+let let1 = 20;
+const const1 = 30;
+
+console.log(foo());
+function foo() {
+  return "Hello!";
+}
+
+console.log(bar());
+var bar = function () {
+  return "Hello!";
+};
+
+var x = 10;
+function test() {
+  console.log(x);
+  var x = 20;
+}
+test();
+
+console.log(typeof foo);
+var foo = function () {
+  console.log("Hello");
+};
+
+console.log(test);
+var test = 10;
+function test() {}
+console.log(test);
+
+foo();
+bar();
+
+function foo() {
+  console.log("foo");
+}
+
+const bar = function () {
+  console.log("bar");
+};
+
+// BOM & DOM
+console.log(window, "window");
+console.log(window.innerHeight, "height");
+console.log(window.innerWidth, " width");
+
+let width = window.innerWidth;
+if (width < 600) {
+  window.prompt("less than 600px");
+}
+console.log("i am after alert screen");
+
+console.log(window.location, " location");
+console.log(window.navigation, " navigation");
+console.log(window.history, " history");
+
+setTimeout(() => {
+  console.log("another settimeout after 5s");
+}, 5000);
+
+setInterval(() => {
+  console.log("another setinterval after every 3s");
+}, 3000);
+
+window.open();
+
+console.log(window.screen);
+console.log(window.confirm("hi"));
+
+console.dir(document);
+console.log(document);
+
+let elementsAll = document.all;
+console.log(elementsAll[5]);
+
+let selectedElement = document.getElementById("head1");
+selectedElement.style.color = "blue";
+selectedElement.innerText = "hello";
+selectedElement.innerHTML = "<h3>Paragraph</h3>";
+console.log(selectedElement);
+console.log(document.getElementsByTagName("h1"));
+
+let querySelectorEle = document.querySelector("p");
+let querySelectorEleAll = document.querySelectorAll("p");
+console.log(querySelectorEle);
+console.log(querySelectorEleAll);
+
+let parent = document.getElementsByClassName("secondDiv");
+let newP = document.createElement("p");
+newP.className = "pClass";
+newP.id = "pId";
+newP.style.color = "red";
+newP.style.backgroundColor = "aqua";
+console.log(parent, " parent");
+console.log(newP, " newP");
+newP.innerText = "this is new paragraph";
+parent[0].appendChild(newP);
+
+// input
+let input = document.getElementById("input");
+input.addEventListener("input", (event) => {
+  console.log(event.target.value);
+});
+console.log(input);
+
+let btn = document.getElementById("btn");
+console.log(btn);
+btn.addEventListener("mouseover", () => {
+  btn.innerText = "click me";
+});
+
+btn.addEventListener("mouseout", () => {
+  btn.innerText = "clicked";
+});
+
+function clicking() {
+  console.log("clicked");
+}
+
+function showAlert() {
+  alert("Button clicked!");
+}
