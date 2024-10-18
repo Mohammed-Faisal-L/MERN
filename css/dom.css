@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: aqua;
+}
+
+form {
+  background-color: aquamarine;
+  padding: 40px;
+}
+
+p {
+  margin: 0px 0px;
+}

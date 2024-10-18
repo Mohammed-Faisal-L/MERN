@@ -574,3 +574,61 @@ function clicking() {
 function showAlert() {
   alert("Button clicked!");
 }
+
+// events again
+const btns = document.getElementById("mybtn");
+console.log(btn);
+btns.addEventListener("mouseover", () => {
+  btn.innerText = "you are in";
+  btn.style.backgroundColor = "skyblue";
+});
+
+btns.addEventListener("mouseout", () => {
+  btn.innerText = "click me";
+  btn.style.backgroundColor = "goldenrod";
+});
+
+btns.addEventListener('click',(event)=>{
+   console.log('this event is from btn');
+   event.stopPropagation()
+})
+
+let parentDiv = document.getElementById('tragDiv');
+parentDiv.addEventListener('click', (event)=>{
+  console.log('this event is from div');
+},false)
+
+// form validation
+const myform = document.getElementById("myForm");
+const nameField = document.getElementById("name");
+const emailField = document.getElementById("email");
+
+myform.addEventListener("submit", (event) => {
+  event.preventDefault(); // to prevent default behaviour of form submit
+  let nameInput = nameField.value;
+  let emailInput = emailField.value;
+
+  if (nameInput == "" || emailInput == "") {
+    alert("u should fill all the fields");
+  }
+
+  const emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$";
+  const namePattern = "^[a-zA-Z0-9._-]{3,16}$";
+
+  let nameP = document.getElementById("nameError");
+  let emailP = document.getElementById("emailError");
+
+  if (!nameInput.match(namePattern)) {
+    nameP.innerText = "invalid username";
+    nameP.style.color = "red";
+  } else {
+    nameP.innerText = "";
+  }
+
+  if (!emailInput.match(emailPattern)) {
+    emailP.innerText = "invalid email";
+    emailP.style.color = "red";
+  } else {
+    emailP = "";
+  }
+});

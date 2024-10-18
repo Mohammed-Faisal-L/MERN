@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="firstDiv">
+    <!-- <div class="firstDiv">
       <h1 id="head1">header</h1>
       <p>some text</p>
       <p></p>
@@ -17,7 +17,19 @@
       <input type="text" placeholder="fill your name" id="input"/>
       <button onclick="clicking()" id="btn" style="background-color: aqua ; color: blueviolet; padding: 10px;">Click me</button>
       <button onclick="showAlert()">Click Me!</button>
+    </div> -->
+    <div id="tragDiv" style="padding: 10px; background-color: crimson; margin-bottom: 30px; width: 70px;">
+      <button id="mybtn" style="margin: 10px; background-color: goldenrod; padding: 5px; color: white;">Click me</button>
     </div>
+    <form id="myForm" action="">
+      <label for="">Name</label>
+      <input type="text" name="" id="name">
+      <p style="padding: 0; margin: 0px 0px" id="nameError"></p>
+      <label for="">Email</label>
+      <input type="email" name="" id="email">
+      <p style="padding: 0; margin: 0px 0px;" id="emailError"></p>
+      <button type="submit" style="margin: 10px; padding: 10px;">Submit</button>
+    </form>
     <script src="../js/index.js"></script>
   </body>
 </html>

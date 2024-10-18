@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+table {
+  background-color: aquamarine;
+  margin: 2% 4% 0% 4%;
+}
