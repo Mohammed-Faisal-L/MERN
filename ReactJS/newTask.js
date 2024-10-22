@@ -56,7 +56,7 @@ let blue = React.createElement(
   "div",
   {
     style: {
-      marginTop: '1%',
+      marginTop: "1%",
       height: "100px",
       width: "300px",
       border: "1px solid white",
