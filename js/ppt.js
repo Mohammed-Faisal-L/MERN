@@ -75,7 +75,7 @@ runTasks();
 
 // fetch an api
 const myApi = async () => {
-  let url = await fetch("https://dummyjson.com/products")
+  await fetch("https://dummyjson.com/products")
     .then(async (resp) => {
       let response = await resp.json();
       console.log(response);
