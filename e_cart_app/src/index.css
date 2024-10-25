@@ -1,0 +1,54 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  align-items: center;
+}
+
+.navList > ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 10px 10px 10px 0px;
+}
+
+.navList > ul > li {
+  cursor: pointer;
+}
+
+.logo {
+  margin: 10px 0px 10px 10px;
+}
+
+.card {
+  border: 1px solid white;
+  padding: 20px;
+  background-color: grey;
+  min-height: 350px;
+  width: 250px;
+}
+
+.cardImage {
+  height: 250px;
+  width: 250px;
+}
+
+.cardTitle,
+.cardPrice,
+.cardDisc {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cardHolder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.search {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
