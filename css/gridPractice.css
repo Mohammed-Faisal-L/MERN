@@ -8,7 +8,7 @@
   height: 100vh;
   grid-template-columns: 1fr repeat(2, 2fr);
   grid-template-rows: 1fr repeat(2, 2fr) 1fr;
-  grid-template-areas:
+  grid-template-areas:  
     "header header header"
     "aside main main"
     "aside section article"
