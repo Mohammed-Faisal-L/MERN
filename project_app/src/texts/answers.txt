@@ -1,0 +1,16 @@
+(1) What is the purpose of useState in React?
+(Ans) useState is a hook that lets functional components keep track of state. 
+Before hooks, only class components could manage state. 
+With useState, you can have local state right in your functional components, making your code cleaner and easier to understand.
+
+(2) How do you initialize state in a functional component using useState?
+(Ans) To setup state in a functional component with useState, you just call the function and give it an initial value. 
+It gives you back two things: the current state value and a function to update that value.
+Example: const [value, setValue] = useState(0)
+
+(4) Explain the difference between using useState in functional components vs using this.useState in class components.
+(Ans) When you use useState in a functional component, you get to manage a state in a simpler way.
+Each piece of state is handled seperately, and you can update it directly.
+On the otherhand, with class components, you deal with this.setState , which merges new state with the old one.
+This can make things a bit trickier, especially if you have multiple state variables.
+Overall, functional components with hooks tend to lead to cleaner and more straightforward code.
