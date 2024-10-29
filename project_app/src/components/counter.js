@@ -5,7 +5,7 @@ function Counter() {
 
   return (
     <div>
-      <h1 className="aqua">Counter App</h1>
+      <h1 className="aqua">Counter</h1>
       <div className="buttons">
         <button
           onClick={() => {

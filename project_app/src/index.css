@@ -1,5 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+}
+
 h1 {
   text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.ms-3 {
+  background-color: #228b22;
+  margin-left: 3%;
 }
 
 .buttons {
@@ -7,94 +20,70 @@ h1 {
   justify-content: space-around;
 }
 
-/* Basic styling for the todo container */
 .todo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 400px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
-  background-color: #f7f9fc;
+  background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-}
-
-h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Centering the form and styling input/button */
-.center {
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
 }
 
 form {
   display: flex;
-  width: 100%;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
-  flex-grow: 1;
+  flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solide #ccc;
   border-radius: 4px 0 0 4px;
-  outline: none;
+}
+
+button {
+  color: white;
+  padding: 10px;
+  border: none;
+  background-color: #dc3545;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button[type="button"] {
-  padding: 10px 15px;
   background-color: #28a745;
-  border: none;
-  border-radius: 0 4px 4px 0;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button[type="button"]:hover {
   background-color: #218838;
 }
 
-/* Styling for the task items */
-.items-center {
+.item-center {
   width: 100%;
 }
 
 .task-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #ffffff;
   border: 1px solid #e1e4e8;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: white;
 }
 
 .task-item p {
   margin: 0;
-  font-size: 16px;
   color: #555;
 }
 
-.task-item button {
+.tast-item button {
   background-color: #dc3545;
-  border: none;
   color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .task-item button:hover {
   background-color: #c82333;
 }
-

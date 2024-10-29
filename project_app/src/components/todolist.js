@@ -1,33 +1,39 @@
 import React, { useState } from "react";
+import TodoItem from "./todoitem";
 
 const Todo = () => {
   const [input, setInput] = useState("");
   const [task, setTask] = useState([]);
 
-  const inputData = (e) => {
-    setInput(e.target.value);
+  const inputData = (event) => {
+    setInput(event.target.value);
   };
 
-  const addTask = (e) => {
-    e.preventDefault();
+  const addTask = (event) => {
+    event.preventDefault(); // to avoid reloading of the page
     if (input === "") {
       alert("Please enter a task");
     } else {
       setTask([...task, input]);
-      setInput("");
+      setInput(""); // Clear input after adding
     }
   };
 
   const handleDelete = (index) => {
-    const updatedArray = task.filter((_, i) => i !== index);
+    // 1
+    const updatedArray = task.filter((value, i) => {
+      // 0 !== 1
+      console.log(value); // ['studying']
+      return i !== index;
+    });
     setTask(updatedArray);
   };
 
   return (
     <div className="todo-container">
-      <h1>TODO LIST</h1>
+      <h1>Todo List</h1>
       <div className="center">
-        <form>
+        <form onSubmit={addTask}>
           <input
             type="text"
             name="task"
@@ -35,17 +41,19 @@ const Todo = () => {
             value={input}
             onChange={inputData}
           />
-          <button type="button" onClick={addTask}>
-            +
+          <button className="ms-3" type="submit">
+            Add
           </button>
         </form>
       </div>
       <div className="items-center">
         {task.map((value, index) => (
-          <div className="task-item" key={index}>
-            <p>{value}</p>
-            <button onClick={() => handleDelete(index)}>Delete</button>
-          </div>
+          <TodoItem
+            key={index}
+            data={value}
+            index={index}
+            onDelete={handleDelete}
+          />
         ))}
       </div>
     </div>
