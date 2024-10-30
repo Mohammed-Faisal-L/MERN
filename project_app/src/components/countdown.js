@@ -5,7 +5,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime((t) => (t > 0 ? t - 1 : 60));
+      setTime((t) => (t > 0 ? t - 1 : 59));
     }, 1000);
 
     return () => clearInterval(timer);

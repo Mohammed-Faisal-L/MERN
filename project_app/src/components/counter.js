@@ -5,12 +5,12 @@ function Counter() {
 
   return (
     <div>
+      <hr />
       <h1 className="aqua">Counter</h1>
       <div className="buttons">
         <button
           onClick={() => {
-            const newCount = counter + 1; // Calculate the new count
-            setCounting(newCount); // Set the updated count
+            setCounting((count) => count + 1); // Set the updated count
           }}
         >
           Increment
@@ -18,8 +18,7 @@ function Counter() {
 
         <button
           onClick={() => {
-            const newCount = counter - 1; // Calculate the new count
-            setCounting(newCount); // Set the updated count
+            setCounting((count) => count - 1); // Set the updated count
           }}
         >
           Decrement

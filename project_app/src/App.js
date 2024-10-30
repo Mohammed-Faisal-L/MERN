@@ -9,8 +9,8 @@ function App() {
     <div>
       <Counter />
       <Todo />
-      <VotingSystem/>
-      <CountdownTimer/>
+      <VotingSystem />
+      <CountdownTimer />
     </div>
   );
 }

@@ -20,9 +20,7 @@ const Todo = () => {
   };
 
   const handleDelete = (index) => {
-    // 1
     const updatedArray = task.filter((value, i) => {
-      // 0 !== 1
       console.log(value); // ['studying']
       return i !== index;
     });
