@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import VotingButton from "./votingbutton";
 
 const VotingSystem = () => {
   const options = ["Party A", "Party B", "Party C"];
@@ -15,11 +16,13 @@ const VotingSystem = () => {
       <hr />
       <h1>Voting</h1>
       {options.map((option, index) => (
-        <div key={index} className="voting-button">
-          <button onClick={() => handleVote(index)}>
-            Vote for {option} ({votes[index]} votes)
-          </button>
-        </div>
+        <VotingButton
+          key={index}
+          index={index}
+          option={option}
+          votes={votes}
+          addVote={handleVote}
+        />
       ))}
       <hr />
     </div>

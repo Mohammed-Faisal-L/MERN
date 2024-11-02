@@ -21,7 +21,7 @@ const Todo = () => {
 
   const handleDelete = (index) => {
     const updatedArray = task.filter((value, i) => {
-      console.log(value); // ['studying']
+      console.log(value);
       return i !== index;
     });
     setTask(updatedArray);
@@ -48,7 +48,7 @@ const Todo = () => {
         {task.map((value, index) => (
           <TodoItem
             key={index}
-            data={value}
+            value={value}
             index={index}
             onDelete={handleDelete}
           />

@@ -1,9 +1,9 @@
 import React from "react";
 
-const TodoItem = ({ data, index, onDelete }) => {
+const TodoItem = ({ value, index, onDelete }) => {
   return (
     <div className="task-item">
-      <p>{data}</p>
+      <p>{value}</p>
       <button onClick={() => onDelete(index)}>Delete</button>
     </div>
   );
