@@ -1,5 +1,5 @@
 import "./App.css";
-import CountdownTimer from "./components/countdown";
+import CountDownTimer from "./components/countdown";
 import Counter from "./components/counter";
 import Todo from "./components/todolist";
 import VotingSystem from "./components/voting";
@@ -10,7 +10,7 @@ function App() {
       <Counter />
       <Todo />
       <VotingSystem />
-      <CountdownTimer />
+      <CountDownTimer />
     </div>
   );
 }

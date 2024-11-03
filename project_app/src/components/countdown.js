@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const CountdownTimer = () => {
+const CountDownTimer = () => {
   const [time, setTime] = useState(59);
 
   useEffect(() => {
@@ -14,9 +14,9 @@ const CountdownTimer = () => {
   return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
       <h1>Countdown Timer</h1>
-      <p>{time} seconds remaining...</p> <hr />
+      <p>{time} seconds remaining...</p>
     </div>
   );
 };
 
-export default CountdownTimer;
+export default CountDownTimer;

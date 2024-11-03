@@ -13,7 +13,6 @@ const VotingSystem = () => {
 
   return (
     <div className="voting">
-      <hr />
       <h1>Voting</h1>
       {options.map((option, index) => (
         <VotingButton
@@ -24,7 +23,6 @@ const VotingSystem = () => {
           addVote={handleVote}
         />
       ))}
-      <hr />
     </div>
   );
 };

@@ -5,7 +5,6 @@ function Counter() {
 
   return (
     <div>
-      <hr />
       <h1 className="aqua">Counter</h1>
       <div className="buttons">
         <button
@@ -32,7 +31,7 @@ function Counter() {
           Reset
         </button>
       </div>
-      <h1>{counter}</h1> <hr />
+      <h1>{counter}</h1>
     </div>
   );
 }
