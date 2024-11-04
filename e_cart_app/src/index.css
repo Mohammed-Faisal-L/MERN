@@ -28,6 +28,25 @@
   width: 250px;
 }
 
+.skcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-color: lightgrey;
+  min-height: 400px;
+  width: 300px;
+  border-radius: 15px;
+  margin-top: 2%;
+}
+
+.skcard .skcardTitle {
+  background-color: grey;
+  width: 80%;
+  height: 30px;
+  border-radius: 15px;
+}
+
 .cardImage {
   height: 250px;
   width: 250px;
@@ -44,7 +63,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
+}
+
+.skcardHolder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0% 5%;
 }
 
 .search {

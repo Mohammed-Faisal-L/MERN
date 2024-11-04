@@ -38,7 +38,7 @@ form {
 input[type="text"] {
   flex: 1;
   padding: 10px;
-  border: 1px solide #ccc;
+  border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
 }
 

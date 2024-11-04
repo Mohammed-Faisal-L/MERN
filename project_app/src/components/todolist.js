@@ -3,7 +3,7 @@ import TodoItem from "./todoitem";
 
 const Todo = () => {
   const [input, setInput] = useState("");
-  const [task, setTask] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   const inputData = (event) => {
     setInput(event.target.value);
@@ -14,17 +14,17 @@ const Todo = () => {
     if (input === "") {
       alert("Please enter a task");
     } else {
-      setTask([...task, input]);
+      setTasks([...tasks, input]);
       setInput(""); // Clear input after adding
     }
   };
 
   const handleDelete = (index) => {
-    const updatedArray = task.filter((value, i) => {
+    const updatedArray = tasks.filter((value, i) => {
       console.log(value);
       return i !== index;
     });
-    setTask(updatedArray);
+    setTasks(updatedArray);
   };
 
   return (
@@ -45,7 +45,7 @@ const Todo = () => {
         </form>
       </div>
       <div className="items-center">
-        {task.map((value, index) => (
+        {tasks.map((value, index) => (
           <TodoItem
             key={index}
             value={value}
