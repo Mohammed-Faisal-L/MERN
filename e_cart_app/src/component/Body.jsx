@@ -6,6 +6,7 @@ function Body() {
   const [productsData, setProductsData] = useState([]); // original
   const [tempData, setTempData] = useState([]); // temporary
   const [render, setRender] = useState(false);
+  const [inputText, setInputText] = useState("");
 
   const fetchData = async () => {
     const url = "https://dummyjson.com/carts";
@@ -23,15 +24,29 @@ function Body() {
 
   if (productsData.length === 0) {
     return ( 
-            <div className="skcardHolder">
-             {Array(8).fill().map(() => <Shimmer/>)}
-             </div>
-    )} else {
+      <div className="skcardHolder">
+        {Array(8).fill().map(() => <Shimmer/>)}
+      </div>
+    )
+  } else {
     return (
       <div className="body">
         <article className="search">
+          <input 
+          type="text" 
+          value={inputText} 
+          onChange={(event)=> setInputText(event.target.value)} 
+          placeholder="Enter Your Search" />
+          <button onClick={() => {
+            const filteredData = productsData.filter((product) => { 
+              let upperCaseTitle = product.title.toUpperCase();
+              let upperCaseInputText = inputText.toUpperCase();
+              return upperCaseTitle.includes(upperCaseInputText);
+            })
+            setTempData(filteredData);
+          }}>Search</button>
           <button onClick={() => setRender(prevRender => !prevRender)}>
-            Toggle Render
+            Reload
           </button>
           <button
             onClick={() => {

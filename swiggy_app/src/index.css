@@ -1,0 +1,29 @@
+h1 {
+  text-align: center;
+}
+
+.navbar-expand-lg {
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.card-img-top {
+  height: 300px;
+  width: 300px;
+}
+
+img.card-img-top {
+  border-radius: 10%;
+}
+
+.card {
+  border-radius: 10%;
+}
+
+p.ms-2, p.card-text {
+  margin-bottom: 0%;
+}
+
+p {
+  margin-bottom: 0%;
+}
