@@ -1,11 +1,11 @@
-import Body from "./component/Body";
+import { Outlet } from "react-router-dom";
 import Nav from "./component/Nav";
 
 function App() {
   return (
     <div>
       <Nav />
-      <Body />
+      <Outlet />
     </div>
   );
 }

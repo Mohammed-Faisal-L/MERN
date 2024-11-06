@@ -4,13 +4,32 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Menu from './components/Menu';
+import Body from './components/Body';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element: <App/>,
+    children: [
+      {
+        path: '/',
+        element: <Body/>
+      },
+      {
+        path: '/menu/:id',
+        element: <Menu/>
+      }
+    ]
+  }
+])
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

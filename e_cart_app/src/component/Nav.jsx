@@ -1,18 +1,19 @@
 import React from 'react'
 import { myUrl } from '../util/constants'
+import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
     <>
        <section className='navBar'>
         <aside className='logo'>
-           <img height="80px" width="80px" src={myUrl} alt="app logo" />
+           <img height="50px" width="50px" src={myUrl} alt="app logo" />
         </aside>
         <aside className='navList'>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact Us</li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/aboutUs'>About Us</Link></li>
+                <li><Link to='/contactUs'>Contact Us</Link></li>
             </ul>
         </aside>
        </section>

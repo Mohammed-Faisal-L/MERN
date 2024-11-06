@@ -17,7 +17,7 @@ function Body() {
 
   return (
     <div className="d-flex flex-wrap gap-4 justify-content-around mt-4">
-       {data.map((restaurant, index)=>(
+       {data?.map((restaurant, index)=>(
         <Card key={index} restaurant={restaurant}/>
        ))}
     </div>
