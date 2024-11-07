@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -7,7 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import ErrorPage from "./pages/ErrorPage";
-import Body from "./component/Body";
+import InfoPage from "./pages/InfoPage";
+import React, { lazy, Suspense } from "react";
+import Shimmer from "./commonComponent/Shimmer";
+const Body = lazy(() => import("./component/Body"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -18,7 +20,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Body />
+          </Suspense>
+        ),
       },
       {
         path: "/aboutUs",
@@ -27,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs />,
+      },
+      {
+        path: "/info/:id",
+        element: <InfoPage />,
       },
     ],
   },

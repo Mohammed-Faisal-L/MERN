@@ -14,6 +14,7 @@ function Nav() {
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/aboutUs'>About Us</Link></li>
                 <li><Link to='/contactUs'>Contact Us</Link></li>
+                <li><Link to='/info/'>Info Page</Link></li>
             </ul>
         </aside>
        </section>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../commonComponent/Card";
-import Shimmer from "../commonComponent/Shimmer";
+// import Shimmer from "../commonComponent/Shimmer";
 
 function Body() {
   const [productsData, setProductsData] = useState([]); // original
@@ -22,13 +22,13 @@ function Body() {
     fetchData();
   }, [render]);
 
-  if (productsData.length === 0) {
-    return ( 
-      <div className="skcardHolder">
-        {Array(8).fill().map(() => <Shimmer/>)}
-      </div>
-    )
-  } else {
+  // if (productsData.length === 0) {
+  //   return ( 
+  //     <div className="skcardHolder">
+  //       {Array(8).fill().map(() => <Shimmer/>)}
+  //     </div>
+  //   )
+  // } else {
     return (
       <div className="body">
         <article className="search">
@@ -70,7 +70,7 @@ function Body() {
         </article>
       </div>
     );
-  }
+  // }
 }
 
 export default Body;

@@ -24,10 +24,9 @@ function Menu() {
         <div>
             <h1 className='mb-5'>Menu Card</h1>
             <div className="d-flex justify-content-center flex-wrap">
-            {console.log(menuItemData[0])}
             {menuItemData?.map((ele) => {
                 return (
-              <div className="card mb-3 w-75">
+              <div className="card mb-3 w-75 shadow">
                 <div className="row g-0">
                   <div className="col-md-10">
                     <div className="card-body">
