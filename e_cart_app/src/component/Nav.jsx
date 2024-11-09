@@ -1,25 +1,33 @@
-import React from 'react'
-import { myUrl } from '../util/constants'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { myUrl } from "../util/constants";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <>
-       <section className='navBar'>
-        <aside className='logo'>
-           <img height="50px" width="50px" src={myUrl} alt="app logo" />
+      <section className="navBar">
+        <aside className="logo">
+          <img height="50px" width="50px" src={myUrl} alt="app logo" />
         </aside>
-        <aside className='navList'>
-            <ul>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/aboutUs'>About Us</Link></li>
-                <li><Link to='/contactUs'>Contact Us</Link></li>
-                <li><Link to='/info/'>Info Page</Link></li>
-            </ul>
+        <aside className="navList">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/aboutUs">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contactUs">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/info/">Info Page</Link>
+            </li>
+          </ul>
         </aside>
-       </section>
+      </section>
     </>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

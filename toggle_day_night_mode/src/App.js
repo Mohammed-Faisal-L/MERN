@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <Header />
-      <Buttons setFlag={setFlag} />
+      <Buttons flag={flag} setFlag={setFlag} />
       <Display flag={flag} />
     </div>
   );

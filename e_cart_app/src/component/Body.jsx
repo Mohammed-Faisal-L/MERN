@@ -12,7 +12,7 @@ function Body() {
     const url = "https://dummyjson.com/carts";
     const response = await fetch(url);
     const jsonData = await response.json();
-    const cartData = jsonData.carts.map(cart => cart.products);
+    const cartData = jsonData.carts.map((cart) => cart.products);
     const actualData = cartData.flat();
     setProductsData(actualData);
     setTempData(actualData); // Set both to original data initially
@@ -23,53 +23,68 @@ function Body() {
   }, [render]);
 
   // if (productsData.length === 0) {
-  //   return ( 
+  //   return (
   //     <div className="skcardHolder">
   //       {Array(8).fill().map(() => <Shimmer/>)}
   //     </div>
   //   )
   // } else {
-    return (
-      <div className="body">
-        <article className="search">
-          <input 
-          type="text" 
-          value={inputText} 
-          onChange={(event)=> setInputText(event.target.value)} 
-          placeholder="Enter Your Search" />
-          <button onClick={() => {
-            const filteredData = productsData.filter((product) => { 
+  return (
+    <div className="body">
+      <article className="search">
+        <input
+          type="text"
+          value={inputText}
+          onChange={(event) => setInputText(event.target.value)}
+          placeholder="Enter Your Search"
+        />
+        <button
+          onClick={() => {
+            const filteredData = productsData.filter((product) => {
               let upperCaseTitle = product.title.toUpperCase();
               let upperCaseInputText = inputText.toUpperCase();
               return upperCaseTitle.includes(upperCaseInputText);
-            })
+            });
             setTempData(filteredData);
-          }}>Search</button>
-          <button onClick={() => setRender(prevRender => !prevRender)}>
-            Reload
-          </button>
-          <button
-            onClick={() => {
-              const filteredData = productsData.filter(product => product.price < 500);
-              setTempData(filteredData); // Use tempData to store filtered data
-            }}
-          >
-            Less than 500/-
-          </button>
-          <button
-            onClick={() => {
-              const filteredData = productsData.filter(product => product.price < 1000);
-              setTempData(filteredData); // Use tempData to store filtered data
-            }}
-          >
-            Less than 1000/-
-          </button>
-        </article>
-        <article className="cardHolder">
-          {tempData.map((product, index) => <Card key={`${index}${product.id}`} productData={product} id={index} />)}
-        </article>
-      </div>
-    );
+          }}
+        >
+          Search
+        </button>
+        <button onClick={() => setRender((prevRender) => !prevRender)}>
+          Reload
+        </button>
+        <button
+          onClick={() => {
+            const filteredData = productsData.filter(
+              (product) => product.price < 500
+            );
+            setTempData(filteredData); // Use tempData to store filtered data
+          }}
+        >
+          Less than 500/-
+        </button>
+        <button
+          onClick={() => {
+            const filteredData = productsData.filter(
+              (product) => product.price < 1000
+            );
+            setTempData(filteredData); // Use tempData to store filtered data
+          }}
+        >
+          Less than 1000/-
+        </button>
+      </article>
+      <article className="cardHolder">
+        {tempData.map((product, index) => (
+          <Card
+            key={`${index}${product.id}`}
+            productData={product}
+            id={index}
+          />
+        ))}
+      </article>
+    </div>
+  );
   // }
 }
 

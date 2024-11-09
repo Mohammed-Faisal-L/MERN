@@ -20,10 +20,15 @@ img.card-img-top {
   border-radius: 10%;
 }
 
-p.ms-2, p.card-text {
+p.ms-2,
+p.card-text {
   margin-bottom: 0%;
 }
 
 p {
   margin-bottom: 0%;
+}
+
+.w-20 {
+  width: 20%;
 }

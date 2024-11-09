@@ -8,8 +8,6 @@ export const useCheckNetwork = () => {
   });
 
   window.addEventListener("online", () => {
-    setStatus(false);
+    setStatus(true);
   });
-
-  return status;
 };
