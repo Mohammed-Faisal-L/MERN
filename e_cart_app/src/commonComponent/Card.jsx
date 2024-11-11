@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { apple } from "../util/context";
 
 function Card({ productData }) {
-  const {dataName} = useContext(apple);
+  const { dataName } = useContext(apple);
 
   return (
     <div className="card">
@@ -17,7 +17,8 @@ function Card({ productData }) {
         <span>Description:</span> all maintained products
       </p>
       <p>
-        <span>UserName:</span>{dataName}
+        <span>UserName:</span>
+        {dataName}
       </p>
     </div>
   );
