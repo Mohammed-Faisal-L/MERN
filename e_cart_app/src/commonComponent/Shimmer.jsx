@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Shimmer() {
   return (
@@ -7,7 +7,7 @@ function Shimmer() {
       <p className="skcardTitle"></p>
       <p className="skcardTitle"></p>
     </div>
-  )
+  );
 }
 
-export default Shimmer
+export default Shimmer;

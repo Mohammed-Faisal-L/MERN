@@ -6,7 +6,7 @@ export const useFetchRestaurants = () => {
   const [tempData, setTempData] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(`${swiggyUrl}`);
+    const response = await fetch(swiggyUrl);
     const jsonData = await response.json();
     const fetchedRestaurants =
       jsonData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle

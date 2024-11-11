@@ -6,7 +6,6 @@ import { useCheckNetwork } from "../utils/customHooks/useCheckNetwork";
 function Body() {
   let { restaurants, tempData, setTempData } = useFetchRestaurants();
   const checkNetwork = useCheckNetwork();
-
   return checkNetwork ? (
     <h1> No Internet !!! Please Check Your Internet Connection !!!</h1>
   ) : (

@@ -10,7 +10,7 @@ function MenuCard({ ele }) {
             <h5 className="card-title">{ele.card?.info?.name}</h5>
             <p className="card-text fw-bold">
               {ele.card?.info?.price
-                ? `₹ ${(ele.card.info.price / 100).toLocaleString()}`
+                ? `₹${(ele.card.info.price / 100).toLocaleString()}`
                 : "N/A"}
             </p>
             <div className="d-flex justify-content-start mt-3">
