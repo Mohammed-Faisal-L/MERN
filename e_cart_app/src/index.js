@@ -9,6 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import InfoPage from "./pages/InfoPage";
 import React, { lazy, Suspense } from "react";
 import Shimmer from "./commonComponent/Shimmer";
+import Cart from "./pages/Cart";
 const Body = lazy(() => import("./component/Body"));
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/contactUs",
         element: <ContactUs />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/info/:id",

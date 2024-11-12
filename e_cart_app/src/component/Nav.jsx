@@ -21,6 +21,9 @@ function Nav() {
               <Link to="/contactUs">Contact Us</Link>
             </li>
             <li>
+              <Link to="/cart">Cart</Link>
+            </li>
+            <li>
               <Link to="/info/">Info Page</Link>
             </li>
           </ul>

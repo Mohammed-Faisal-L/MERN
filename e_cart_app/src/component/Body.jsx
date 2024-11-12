@@ -1,23 +1,12 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card, { WithHeaderCard } from "../commonComponent/Card";
 import Shimmer from "../commonComponent/Shimmer";
-import { apple } from "../util/context";
 
 function Body() {
   const [productsData, setProductsData] = useState([]); // original
   const [tempData, setTempData] = useState([]); // temporary
   const [render, setRender] = useState(false);
   const [inputText, setInputText] = useState("");
-
-  const { dataName, changeData } = useContext(apple);
-
-  const refVal = useRef(null);
-  const [count, setCount] = useState(0);
-  const prevCount = useRef(0);
-
-  useEffect(() => {
-    prevCount.current = count;
-  }, [count]);
 
   const CardEnhanced = WithHeaderCard(Card);
 
@@ -48,36 +37,6 @@ function Body() {
   } else {
     return (
       <div className="body">
-        <label>This is to update the context value</label>
-        <input
-          type="text"
-          value={dataName}
-          className="p-2 m-2 border"
-          onChange={(e) => changeData(e.target.value)}
-        />
-        <div>
-          <p className="m-2 text-lg">useState count:{count}</p>
-          <p className="m-2 text-lg">previous count:{prevCount.current}</p>
-          <button
-            className="p-2 m-2 bg-lime-400 text-zinc-100"
-            onClick={() => {
-              setCount(count + 1);
-            }}
-          >
-            Click to update the count
-          </button>
-        </div>
-        <div>
-          <input ref={refVal} placeholder="ref input type" type="text" />
-          <button
-            className="m-2 p-2 bg-amber-300 text-slate-100 rounded-lg"
-            onClick={(e) => {
-              refVal.current.focus();
-            }}
-          >
-            Click me to focus
-          </button>
-        </div>
         <article className="search">
           <input
             type="text"
