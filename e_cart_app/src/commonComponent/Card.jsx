@@ -1,12 +1,23 @@
 import React, { useContext } from "react";
 import { apple } from "../util/context";
+import { useDispatch } from "react-redux";
+import { addItem } from "../util/redux/slices/cartSlice";
 
 function Card({ productData }) {
   const { dataName } = useContext(apple);
+  const dispatch = useDispatch();
 
   return (
     <div className="card">
       <img src={productData.thumbnail} className="cardImage" alt="card Image" />
+      <button
+        onClick={() => {
+          dispatch(addItem(productData));
+        }}
+        className="bg-black text-white p-1 ps-4 pe-4 m-1 rounded-lg"
+      >
+        Add+
+      </button>
       <p className="cardTitle">
         <span>Name:</span> {productData.title}
       </p>

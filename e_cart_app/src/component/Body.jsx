@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Card, { WithHeaderCard } from "../commonComponent/Card";
 import Shimmer from "../commonComponent/Shimmer";
+import axios from "axios";
 
 function Body() {
   const [productsData, setProductsData] = useState([]); // original
@@ -11,10 +12,12 @@ function Body() {
   const CardEnhanced = WithHeaderCard(Card);
 
   const fetchData = async () => {
-    const url = "https://dummyjson.com/carts";
-    const response = await fetch(url);
-    const jsonData = await response.json();
-    const cartData = jsonData.carts.map((cart) => cart.products);
+    axios.get("https://dummyjson.com/carts").then((response) => {
+      const fetchedData = response.data.carts;
+      setProductsData(fetchedData);
+    });
+
+    const cartData = productsData.map((cart) => cart.products);
     const actualData = cartData.flat();
     setProductsData(actualData);
     setTempData(actualData); // Set both to original data initially

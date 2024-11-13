@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
 import Nav from "./component/Nav";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { apple } from "./util/context";
+import { Provider } from "react-redux";
+import appStore from "./util/redux/appStore";
 
 function App() {
   const { dataName } = useContext(apple);
@@ -9,10 +11,16 @@ function App() {
 
   return (
     <div>
-      <Nav />
-      <apple.Provider value={{ dataName: userName, changeData: setUserName }}>
-        <Outlet />
-      </apple.Provider>
+      <React.StrictMode>
+        <Provider store={appStore}>
+          <apple.Provider
+            value={{ dataName: userName, changeData: setUserName }}
+          >
+            <Nav />
+            <Outlet />
+          </apple.Provider>
+        </Provider>
+      </React.StrictMode>
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { apple } from "../util/context";
+import Child from "../component/Child";
 
 function ContactUs() {
   const { dataName, changeData } = useContext(apple);
@@ -11,6 +12,12 @@ function ContactUs() {
   useEffect(() => {
     prevCount.current = count;
   }, [count]);
+
+  const [value, setValue] = useState(0);
+
+  const handleClick = useCallback(() => {
+    setValue((previousCount) => previousCount + 1);
+  }, []);
 
   return (
     <div>
@@ -44,6 +51,17 @@ function ContactUs() {
           Click me to focus
         </button>
       </div>
+      <div className="w-[40%] m-auto">
+      <h1>useCallback and useMemo demo</h1>
+      <p>{value}</p>
+      <button
+        className="p-2 rounded-lg bg-zinc-900 text-slate-300"
+        onClick={handleClick}
+      >
+        click from parent component
+      </button>
+      <Child onclick={handleClick} />
+    </div>
     </div>
   );
 }

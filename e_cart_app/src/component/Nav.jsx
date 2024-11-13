@@ -1,8 +1,10 @@
 import React from "react";
 import { myUrl } from "../util/constants";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Nav() {
+  const items = useSelector((store) => store.cart.items);
   return (
     <>
       <section className="navBar">
@@ -12,19 +14,29 @@ function Nav() {
         <aside className="navList">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link key="45" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/aboutUs">About Us</Link>
+              <Link key="46" to="/aboutUs">
+                About Us
+              </Link>
             </li>
             <li>
-              <Link to="/contactUs">Contact Us</Link>
+              <Link key="47" to="/contactUs">
+                Contact Us
+              </Link>
             </li>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link key="48" to="/cart">
+                Cart ({items.length} items)
+              </Link>
             </li>
             <li>
-              <Link to="/info/">Info Page</Link>
+              <Link key="49" to="/info/">
+                Info Page
+              </Link>
             </li>
           </ul>
         </aside>

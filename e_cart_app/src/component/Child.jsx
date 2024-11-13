@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 
 const Child = memo(({ onclick }) => {
-  console.log("child component is rendering");
   return (
     <div>
       <button
