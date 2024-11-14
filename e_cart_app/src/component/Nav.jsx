@@ -19,22 +19,27 @@ function Nav() {
               </Link>
             </li>
             <li>
-              <Link key="46" to="/aboutUs">
+              <Link key="46" to="/login">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link key="47" to="/aboutUs">
                 About Us
               </Link>
             </li>
             <li>
-              <Link key="47" to="/contactUs">
+              <Link key="48" to="/contactUs">
                 Contact Us
               </Link>
             </li>
             <li>
-              <Link key="48" to="/cart">
+              <Link key="49" to="/cart">
                 Cart ({items.length} items)
               </Link>
             </li>
             <li>
-              <Link key="49" to="/info/">
+              <Link key="50" to="/info/">
                 Info Page
               </Link>
             </li>

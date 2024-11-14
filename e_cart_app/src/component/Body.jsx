@@ -12,20 +12,25 @@ function Body() {
   const CardEnhanced = WithHeaderCard(Card);
 
   const fetchData = async () => {
-    axios.get("https://dummyjson.com/carts").then((response) => {
-      const fetchedData = response.data.carts;
-      setProductsData(fetchedData);
-    });
+    try {
+      // Await the result of the axios call
+      const response = await axios.get("https://dummyjson.com/carts");
 
-    const cartData = productsData.map((cart) => cart.products);
-    const actualData = cartData.flat();
-    setProductsData(actualData);
-    setTempData(actualData); // Set both to original data initially
+      // Extract and transform data directly from response
+      const fetchedData = response.data.carts;
+      const actualData = fetchedData.flatMap((cart) => cart.products);
+
+      // Set both `productsData` and `tempData` to `actualData`
+      setProductsData(actualData);
+      setTempData(actualData); // Assuming `tempData` is meant to store the original data
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   useEffect(() => {
     fetchData();
-  }, [render]);
+  }, [render]); // Dependency array to re-run `fetchData` when `render` changes
 
   if (productsData.length === 0) {
     return (

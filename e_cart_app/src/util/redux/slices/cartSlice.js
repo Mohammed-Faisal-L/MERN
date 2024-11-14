@@ -7,11 +7,15 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItem: (state, action) => {
-      state.items.push(action.payload);
+      let searchId = action.payload.id;
+      let exists = state.items.some((item) => item.id === searchId);
+
+      if (!exists) state.items.push(action.payload);
     },
     deleteItem: (state, action) => {
-      const itemId = action.payload;
-      state.items = state.items.filter((item) => item.id !== itemId);
+      const itemIdToDelete = action.payload;
+      const index = state.items.findIndex((item) => item.id === itemIdToDelete);
+      if (index !== -1) state.items.splice(index, 1);
     },
   },
 });
