@@ -6,7 +6,7 @@ import { Provider } from "react-redux";
 import appStore from "./util/redux/appStore";
 
 function App() {
-  const { dataName } = useContext(apple);
+  const { dataName,age,school } = useContext(apple);
   const [userName, setUserName] = useState(dataName);
 
   return (

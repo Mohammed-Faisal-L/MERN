@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../util/redux/slices/cartSlice";
 
 function Card({ productData }) {
-  const { dataName } = useContext(apple);
+  const { dataName, age, school } = useContext(apple);
   const dispatch = useDispatch();
 
   return (
@@ -30,6 +30,14 @@ function Card({ productData }) {
       <p>
         <span>UserName:</span>
         {dataName}
+      </p>
+      <p>
+        <span>Age:</span>
+        {age}
+      </p>
+      <p>
+        <span>School:</span>
+        {school}
       </p>
     </div>
   );

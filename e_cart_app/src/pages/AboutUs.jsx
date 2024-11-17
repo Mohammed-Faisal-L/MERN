@@ -19,7 +19,7 @@ function AboutUs() {
       >
         Reset
       </button>
-      <h1>Count: {state.count}</h1>
+      <h1 role="counter">Count: {state.count}</h1>
       <button
         className="p-2 m-2 bg-lime-400 text-white rounded-lg"
         onClick={() => dispatch(ACTION.DECREMENT)}
