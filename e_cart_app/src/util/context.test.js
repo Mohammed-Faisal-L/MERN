@@ -1,10 +1,10 @@
 // appleContext.test.js
 import { render } from "@testing-library/react";
-import { apple } from "./context";
+import { context } from "./context";
 
 // A mock component to test context values
 const MockComponent = () => {
-  const contextValue = apple._currentValue;
+  const contextValue = context._currentValue;
   return (
     <div>
       <span data-testid="dataName">{contextValue.dataName}</span>
@@ -14,7 +14,7 @@ const MockComponent = () => {
   );
 };
 
-describe("apple context", () => {
+describe("context context", () => {
   it("should have default values", () => {
     const { getByTestId } = render(<MockComponent />);
 

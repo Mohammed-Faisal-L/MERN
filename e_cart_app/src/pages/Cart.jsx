@@ -14,7 +14,7 @@ function Cart() {
             return (
               <div
                 key={cart.id}
-                className="w-[70%] flex justify-between bg-indigo-300 p-2 rounded-lg m-2"
+                className="w-[70%] flex justify-between bg-indigo-500 p-2 rounded-lg m-2"
               >
                 <div>
                   <p className="text-white">

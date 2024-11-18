@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { apple } from "../util/context";
+import { context } from "../util/context";
 import { useDispatch } from "react-redux";
 import { addItem } from "../util/redux/slices/cartSlice";
 
 function Card({ productData }) {
-  const { dataName, age, school } = useContext(apple);
+  const { dataName, age, school } = useContext(context);
   const dispatch = useDispatch();
 
   return (

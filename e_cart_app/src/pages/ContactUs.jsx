@@ -1,9 +1,9 @@
 import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
-import { apple } from "../util/context";
+import { context } from "../util/context";
 import Child from "../component/Child";
 
 function ContactUs() {
-  const { dataName, changeData } = useContext(apple);
+  const { dataName, changeData } = useContext(context);
 
   const refVal = useRef(null);
   const [count, setCount] = useState(0);

@@ -8,13 +8,13 @@ function AboutUs() {
   return (
     <div>
       <button
-        className="p-2 m-2 bg-red-400 text-white rounded-lg"
+        className="p-2 m-2 bg-blue-400 text-white rounded-lg"
         onClick={() => dispatch(ACTION.INCREMENT)}
       >
         Increment
       </button>
       <button
-        className="p-2 m-2 bg-lime-800 text-white rounded-lg"
+        className="p-2 m-2 bg-zinc-400 text-white rounded-lg"
         onClick={() => dispatch(ACTION.ZERO)}
       >
         Reset
@@ -27,7 +27,7 @@ function AboutUs() {
         Decrement
       </button>
       <button
-        className="p-2 m-2 bg-amber-400 text-white rounded-lg"
+        className="p-2 m-2 bg-pink-400 text-white rounded-lg"
         onClick={() => dispatch(ACTION.MULTIPLYTEN)}
       >
         Multiply Ten
