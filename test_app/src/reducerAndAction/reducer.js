@@ -12,5 +12,6 @@ export const reducer = (state, action) => {
       return { count: 0 };
 
     default:
+      return state;
   }
 };

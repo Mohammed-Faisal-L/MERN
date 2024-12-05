@@ -9,11 +9,11 @@ body {
   height: 100vh;
 }
 
-div.test {
+div.card {
   background-color: #ffeb3b;
   padding: 30px 50px;
   border-radius: 20px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   max-width: 400px;
   width: 100%;
