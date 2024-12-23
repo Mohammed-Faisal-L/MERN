@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Specify ECMAScript target version
+    "module": "CommonJS", // Use ES6 modules
+    "rootDir": "./src", // Specify the root directory of TypeScript source files
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2019", "DOM"], // Update to ES2019 to support modern features
+    "skipLibCheck": true // Skip checking declaration files
+  },
+  "include": ["src/**/*"], // Include all files in src directory and subdirectories
+  "exclude": ["node_modules"] // Exclude node_modules and dist folder
+}
